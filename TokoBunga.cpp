@@ -42,3 +42,17 @@ void insertBunga() {
     inventaris.insert(inventaris.begin() + pos, b);
     cout << "Bunga berhasil disisipkan!\n";
 }
+
+void printInventaris() {
+    cout << "\n=== Daftar Bunga ===\n";
+    if (inventaris.empty()) {
+        cout << "Belum ada data bunga.\n";
+    } else {
+        for (int i = 0; i < inventaris.size(); ++i) {
+            cout << i << ". " << inventaris[i].nama 
+                 << " | Stok: " << inventaris[i].stok 
+                 << " | Harga: Rp " << inventaris[i].harga << endl;
+        }
+    }
+}
+
